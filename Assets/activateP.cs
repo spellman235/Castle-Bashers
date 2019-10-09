@@ -20,7 +20,6 @@ public class activateP : MonoBehaviour
         {
             if (player)
             {
-                Debug.Log((player.transform.position - transform.position).magnitude);
                 if ((player.transform.position - transform.position).magnitude < 15)
                 {
                     enabled = false;

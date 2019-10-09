@@ -31,6 +31,7 @@ public class Skill_info : MonoBehaviour {
     //Warning: this script can only run once, or big trouble will comes.
     public void init(int amount,List<Skill> skills)
     {
+        /*
         Sprite tempType = new Sprite();
         tempType = Resources.Load("null", tempType.GetType()) as Sprite;
         if (!tempType)
@@ -42,7 +43,7 @@ public class Skill_info : MonoBehaviour {
             skill[i].skill_script = skills[i];
             skill[i].skillicon = tempType;
         }
-        Invoke("NameUpdate", 1.0f);
+        Invoke("NameUpdate", 1.0f); */
     }
 
     public int GetSkillPrice(int skill_id)

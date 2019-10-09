@@ -46,7 +46,7 @@ public class Skill_TimeStop : Skill
     //Add ripples later
     public override void UseSkill(GameObject caller, GameObject target = null, System.Object optionalParameters = null)
     {
-        base.UseSkill(caller, target, optionalParameters);
+        //base.UseSkill(caller, target, optionalParameters);
         test = false;
         lay = Instantiate(layer, transform.position, layer.transform.rotation) as GameObject;
         timer = 3f;
@@ -63,7 +63,6 @@ public class Skill_TimeStop : Skill
             timer = 8f;
         }
         Time.timeScale = Time.timeScale * mult;
-
 
     }
 

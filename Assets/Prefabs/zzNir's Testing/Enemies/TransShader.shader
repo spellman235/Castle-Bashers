@@ -1,4 +1,6 @@
-﻿Shader "Custom/TransparentShadowCollector"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Custom/TransparentShadowCollector"
 {
 	Properties
 	{
@@ -29,7 +31,7 @@
 	v2f vert(appdata_base v)
 	{
 		v2f o;
-		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.pos = UnityObjectToClipPos(v.vertex);
 		TRANSFER_VERTEX_TO_FRAGMENT(o);
 
 		return o;

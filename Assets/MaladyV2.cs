@@ -494,7 +494,7 @@ public class MaladyV2 : Boss
         SwarmObj.GetComponent<SwarmBehaviour>().setTarget(target);
         swarm_Duration = SwarmObj.GetComponent<SwarmBehaviour>().Duration;
         Vector3 offset = new Vector3(transform.localScale.x * -1 * 0.5f, 0.5f, 0);
-        SwarmBehaviour swarm = Instantiate(SwarmObj, transform.position + offset, transform.rotation) as SwarmBehaviour;
+        GameObject swarm = Instantiate(SwarmObj, transform.position + offset, transform.rotation) as GameObject;
 
     }
 
@@ -536,7 +536,7 @@ public class MaladyV2 : Boss
         summonPos /= 2;
         summonPos += transform.position;
         SummonSkill.GetComponent<SummoningPortal>().setTarget(target);
-        SummoningPortal sp = Instantiate(SummonSkill, summonPos, SummonSkill.transform.rotation) as SummoningPortal;
+        GameObject sp = Instantiate(SummonSkill, summonPos, SummonSkill.transform.rotation) as GameObject;
        
     }
 
